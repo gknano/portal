@@ -1,9 +1,9 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import NavBar from "./Components/NavBar.jsx";
-import MainPage from "./Components/Pages/MainPage.jsx";
-import TablePage from "./Components/Pages/TablePage.js";
-import NoMatchPage from "./Components/Pages/NoMatchPage";
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import NavBar from './Components/NavBar.jsx'
+import MainPage from './Components/Pages/MainPage.jsx'
+import TablePage from './Components/Pages/TablePage.jsx'
+import NoMatchPage from './Components/Pages/NoMatchPage.jsx'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route component={NoMatchPage} />
       </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
