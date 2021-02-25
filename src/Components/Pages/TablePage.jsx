@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { PageContainer } from '../PageContainer'
+import { Table } from '../Table/index'
 
 const TablePageStyle = styled.h1`
   transform: translate(50%, 50%);
@@ -12,7 +13,7 @@ const TablePageStyle = styled.h1`
 const TablePage = () => {
   return (
     <PageContainer>
-      <TablePageStyle>This is TablePage!!</TablePageStyle>
+      <Table />
     </PageContainer>
   )
 }
