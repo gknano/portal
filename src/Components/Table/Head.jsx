@@ -15,7 +15,7 @@ const ThContainer = styled.th`
 
 const HeaderCell = ({ children }) => <ThContainer>{children}</ThContainer>
 
-const headerTitles = ['Name', 'Email', 'Phone Number', '']
+const headerTitles = [`\u{2116}`, 'Name', 'Email', 'Phone Number', '']
 
 export const THead = () => (
   <thead>
