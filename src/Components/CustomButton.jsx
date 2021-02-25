@@ -10,10 +10,10 @@ const StyledButton = styled.button`
   width: 9vmax;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 4px;
   background: transparent;
   &:hover {
-    background-color: #f6f1f100;
+    background-color: #C82333;
     border: 1px solid rgb(198, 198, 198);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }

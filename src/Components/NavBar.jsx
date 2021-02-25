@@ -11,7 +11,8 @@ const NavBarStyle = styled.div`
 const Button = styled.button`
   height: 50px;
   width: 90px;
-  border: 0;
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 4px;
   margin-left: 5px;
   margin-top: 10px;
   &:hover {
