@@ -31,11 +31,18 @@ const BodyCell = ({ children }) => <TdContainer>{children}</TdContainer>
 export const Table = () => {
   const [userInfo, setUserInfo] = useState([])
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
-      .then((json) => setUserInfo(json))
-  }, [])
+  async function fetchUsersInfo() {
+    try {
+      if (!userInfo.length) {
+        let response = await fetch('https://jsonplaceholder.typicode.com/users')
+        let json = await response.json()
+        setUserInfo(json)
+        console.log('fetch')
+      }
+    } catch (err) {
+      console.error(err)
+    }
+  }
 
   const onDeleteHandler = (e, i) => {
     userInfo.splice(i, 1)
@@ -43,22 +50,32 @@ export const Table = () => {
     setUserInfo([...userInfo])
   }
   return (
-    <TableContainer>
-      <THead />
-      <tbody>
-        {userInfo.map(({ name, email, phone }, i) => (
-          <tr key={`user-info-tr${i}`}>
-            <BodyCell>{name}</BodyCell>
-            <BodyCell>{email}</BodyCell>
-            <BodyCell>{phone}</BodyCell>
-            <BodyCell>
-              <CustomButton onClick={(e) => onDeleteHandler(e, i)}>
-                {'Удалить'}
-              </CustomButton>
-            </BodyCell>
-          </tr>
-        ))}
-      </tbody>
-    </TableContainer>
+    <div>
+      <button
+        type="button"
+        className="btn btn-success"
+        onClick={() => fetchUsersInfo()}
+      >
+        Get data
+      </button>
+      <TableContainer>
+        <THead />
+        <tbody>
+          {userInfo.map(({ name, email, phone }, i) => (
+            <tr key={`user-info-tr${i}`}>
+              <BodyCell>{i + 1}</BodyCell>
+              <BodyCell>{name}</BodyCell>
+              <BodyCell>{email}</BodyCell>
+              <BodyCell>{phone}</BodyCell>
+              <BodyCell>
+                <CustomButton onClick={(e) => onDeleteHandler(e, i)}>
+                  {'Удалить'}
+                </CustomButton>
+              </BodyCell>
+            </tr>
+          ))}
+        </tbody>
+      </TableContainer>
+    </div>
   )
 }
