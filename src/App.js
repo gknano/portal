@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import NavBar from './Components/NavBar.jsx'
-import MainPage from './Components/Pages/MainPage.jsx'
-import TablePage from './Components/Pages/TablePage.jsx'
-import NoMatchPage from './Components/Pages/NoMatchPage.jsx'
+import MainPage from './Components/Pages/MainPage'
+import TablePage from './Components/Pages/TablePage'
+import NoMatchPage from './Components/Pages/NoMatchPage'
 
 function App() {
   return (
