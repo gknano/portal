@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { Link } from 'react-router-dom'
 import styled from '@emotion/styled'
 
@@ -26,7 +26,7 @@ const navbarArr = [
   { to: '/', text: 'Main' },
   { to: '/tablepage', text: 'Table' },
 ]
-const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <NavBarStyle>
       {navbarArr.map(({ to, text }, i) => (
