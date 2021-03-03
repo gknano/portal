@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import { PageContainer } from '../PageContainer'
 
-const NoMatchPage = () => {
+const NoMatchPage: FC = () => {
   return (
     <PageContainer>
       <h3>404 - Not found</h3>

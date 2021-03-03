@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from '@emotion/styled'
 import { PageContainer } from '../PageContainer'
 
@@ -9,7 +9,7 @@ const MainPageStyle = styled.h1`
   left: 30%;
 `
 
-const MainPage: React.FC = () => {
+const MainPage: FC = () => {
   return (
     <PageContainer>
       <MainPageStyle>Добро пожаловать!</MainPageStyle>

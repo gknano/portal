@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { THead } from './Head'
 import { CustomButton } from '../CustomButton'
@@ -26,9 +26,9 @@ const TdContainer = styled.td`
   );
 `
 
-const BodyCell = ({ children }) => <TdContainer>{children}</TdContainer>
+const BodyCell: FC = ({ children }) => <TdContainer>{children}</TdContainer>
 
-export const Table = () => {
+export const Table: FC = () => {
   const [userInfo, setUserInfo] = useState([])
 
   async function fetchUsersInfo() {

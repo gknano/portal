@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from '@emotion/styled'
 
 const ThContainer = styled.th`
@@ -13,11 +13,11 @@ const ThContainer = styled.th`
   );
 `
 
-const HeaderCell = ({ children }) => <ThContainer>{children}</ThContainer>
+const HeaderCell: FC = ({ children }) => <ThContainer>{children}</ThContainer>
 
 const headerTitles = [`\u{2116}`, 'Name', 'Email', 'Phone Number', '']
 
-export const THead = () => (
+export const THead: FC = () => (
   <thead>
     <tr>
       {headerTitles.map((title) => (

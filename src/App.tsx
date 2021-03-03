@@ -1,11 +1,11 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import NavBar from './Components/NavBar'
 import MainPage from './Components/Pages/MainPage'
 import TablePage from './Components/Pages/TablePage'
 import NoMatchPage from './Components/Pages/NoMatchPage'
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <div>
       <NavBar />

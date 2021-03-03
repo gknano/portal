@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from '@emotion/styled'
 import { PageContainer } from '../PageContainer'
 import { Table } from '../Table/index'
@@ -10,7 +10,7 @@ const TablePageStyle = styled.h1`
   left: 30%;
 `
 
-const TablePage = () => {
+const TablePage: FC = () => {
   return (
     <PageContainer>
       <Table />

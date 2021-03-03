@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from '@emotion/styled'
 import { CustomButtonProps } from '../types/index'
 
@@ -28,9 +28,6 @@ const StyledButton = styled.button`
   }
 `
 
-export const CustomButton: React.FC<CustomButtonProps> = ({
-  onClick,
-  children,
-}) => {
+export const CustomButton: FC<CustomButtonProps> = ({ onClick, children }) => {
   return <StyledButton onClick={onClick}>{children}</StyledButton>
 }

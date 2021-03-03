@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from '@emotion/styled'
 import { PageConteinerProps } from '../types/index'
 import { dimensions } from '../Styles/variables'
@@ -10,7 +10,7 @@ const StyledPage = styled.div`
   padding: ${dimensions.containerPadding}rem;
 `
 
-export const PageContainer: React.FC<PageConteinerProps> = ({
+export const PageContainer: FC<PageConteinerProps> = ({
   children,
   className,
   style,
