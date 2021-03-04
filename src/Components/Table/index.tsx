@@ -44,7 +44,7 @@ export const Table: FC = () => {
     }
   }
 
-  const onDeleteHandler = (e, i) => {
+  const onDeleteHandler = (e: any, i: number) => {
     userInfo.splice(i, 1)
 
     setUserInfo([...userInfo])
@@ -68,7 +68,7 @@ export const Table: FC = () => {
               <BodyCell>{email}</BodyCell>
               <BodyCell>{phone}</BodyCell>
               <BodyCell>
-                <CustomButton onClick={(e) => onDeleteHandler(e, i)}>
+                <CustomButton onClick={(e: any) => onDeleteHandler(e, i)}>
                   {'Удалить'}
                 </CustomButton>
               </BodyCell>
